@@ -7,7 +7,7 @@ int f(int n, vector<vector<int>> &pt, int li, vector<vector<int>> &dp){
             maxi = max(maxi, pt[n][i]);
            }
        }
-
+    
        return maxi;
    }
 
@@ -17,7 +17,7 @@ int f(int n, vector<vector<int>> &pt, int li, vector<vector<int>> &dp){
     int maxi = 0;
        for(int i=0; i<3; i++){
            if(i!=li){
-            maxi = max(maxi,pt[n][i] + f(n-1, pt, i,dp));
+            maxi = max(maxi, pt[n][i] + f(n-1, pt, i,dp));
            }
     }
     
