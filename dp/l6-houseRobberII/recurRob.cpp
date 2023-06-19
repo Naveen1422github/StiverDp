@@ -1,6 +1,8 @@
 #include <bits/stdc++.h> 
 
-int f(vector<int>&money, int n){
+//all solutions of this prob are copy of 5 so i'm not solving them
+
+long long int f(vector<int>&money, int n){
 
     if(n==0)
     return money[n];
@@ -8,12 +10,11 @@ int f(vector<int>&money, int n){
     if(n<0)
     return 0;
 
-    if(n-2 != 0)
-    int pick = money[n] + f(money, n-2);
-    else
-    int pick = money[n];
+    long long int pick = money[n] + f(money, n-2);
 
-    int notPick = f(money, n-1);    
+    long long int notPick = f(money, n-1);   
+
+    return max(pick, notPick); 
  
 }
 
@@ -21,8 +22,19 @@ int f(vector<int>&money, int n){
 long long int houseRobber(vector<int>& valueInHouse)
 {
     int n = valueInHouse.size();
-    vecor<int> anotherArray;
-    anotherArray = valueInHouse;
-    anotherArray.erase(anotherArray.begin());
-    return f(valueInHouse, n-2,anotherArray, n-1);
+    vector<int> temp1, temp2;
+
+    for(int i=0; i<n; i++)
+    {
+        if(i!=0)
+        temp1.push_back(valueInHouse[i]);
+        if(i!=n-1)
+        temp2.push_back(valueInHouse[i]);
+
+    }
+
+    if(n==1)
+    return valueInHouse[0];
+
+    return max(f(temp1, n-2), f(temp2, n-2));
 }
