@@ -3,7 +3,7 @@
 
 
 #include <bits/stdc++.h>
-nb 
+
 using namespace std;
 
 int countDistinctWays(int n) {

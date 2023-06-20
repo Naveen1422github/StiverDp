@@ -6,34 +6,29 @@
 
 
 #include <bits/stdc++.h> 
-using namespace std;
 
-int f(int n, vector<int> &heights, vector<int> &s){
 
-      if(n<=0)
-      return 0;
+int f(int n, vector<int> &heights, vector<int> &dp){
 
-      if(s[n]!=-1)
-      {
-        return s[n];
-      }
+      if(n<=0) return 0;
 
-      int left = f(n-1, heights, s) + abs(heights[n]-heights[n-1]);
+      if(dp[n]!=-1) return dp[n];
+      
+
+      int left = f(n-1, heights,dp) + abs(heights[n]-heights[n-1]);
 
      int right=INT_MAX;
       if(n>1)
-      right = f(n-2, heights, s) + abs(heights[n]-heights[n-2]);
-
-       s[n] = min(left, right);
-
-   return s[n];
+      right = f(n-2, heights, dp) + abs(heights[n]-heights[n-2]);
+   
+   return  dp[n] = min(right, left);
 
 }
 
 int frogJump(int n, vector<int> &heights) {
 
-    vector<int> s(n, -1);
+    vector<int> dp(n, -1);
 
-    return f(n-1, heights, s);
+    return f(n-1, heights, dp);
 
 }

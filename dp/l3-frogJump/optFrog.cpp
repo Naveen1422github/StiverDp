@@ -4,24 +4,26 @@
 
 #include <bits/stdc++.h> 
 
-
 int frogJump(int n, vector<int> &heights) {
 
-    vector<int> s(n, 0);
-
-    s[0] = 0;
+    int prev = 0 ; 
+    
+    int prev2 = INT_MAX;
 
     for(int i=1; i<n; i++){
-     int left = s[i-1] + abs(heights[i]-heights[i-1]);
+     int left = prev + abs(heights[i]-heights[i-1]);
      int right = INT_MAX;
 
       if(i>1)
-      right = s[i-2] + abs(heights[i]-heights[i-2]);
+      right = prev2 + abs(heights[i]-heights[i-2]);
       
-      s[i] = min(left, right);
+      int curr = min(left, right);
+
+      prev2 = prev;
+      prev = curr;
 
     }
 
-    return s[n-1];
+    return prev;
 
 }
