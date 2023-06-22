@@ -22,6 +22,5 @@ int f(vector<int> &w, vector<int> &v, int n, int mw){
 
 int knapsack(vector<int> weight, vector<int> value, int n, int maxWeight) 
 {
-
 	return f(weight, value, n-1, maxWeight);
 }

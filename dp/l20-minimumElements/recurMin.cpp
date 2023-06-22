@@ -18,7 +18,6 @@ int f(int n, int k, vector<int> &arr){
     if(arr[n]<=k) 
     {
         take = 1 + f(n, k-arr[n], arr);
-        //takeHere = f(n, k-arr[n], arr);
     }
 
     return  min(take, notTake);
