@@ -1,3 +1,3 @@
-# Stiver Dp and Recursion series 
+# Stiver Dp series 
 
-i did max problems on these from 18th june to 22nd
+i did max i can problems from 18th june to 22nd
