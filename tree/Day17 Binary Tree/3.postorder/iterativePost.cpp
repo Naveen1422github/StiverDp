@@ -39,7 +39,7 @@ vector<int> getPostOrderTraversal(TreeNode *root)
 
             }
             else
-            curr = temp;
+            root = temp;
         }
     }
 
