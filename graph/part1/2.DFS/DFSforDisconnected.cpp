@@ -34,9 +34,8 @@ vector<vector<int>> depthFirstSearch(int v, int E, vector<vector<int>> &edges)
 
         if(!visited[i]){
             vector<int> ans;
-            f(visited, adj, ans, 0);
+            f(visited, adj, ans, i);
             visited[i] = true;
-          //  sort(ans.begin(), ans.end());  didn't needed don't know why
             result.push_back(ans);
         }
     }

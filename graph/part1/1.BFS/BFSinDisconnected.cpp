@@ -33,7 +33,7 @@ vector<int> BFS(int v, vector<pair<int, int>> edges)
         int node = q.front();
         q.pop();
         ans.push_back(node);
-        sort(adj[node].begin(), adj[node].end());
+        //sort(adj[node].begin(), adj[node].end());  codestudio asks to be in order
         for(auto it:adj[node]){
             if(!visited[it]){
                 visited[it] = 1;
