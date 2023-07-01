@@ -50,6 +50,6 @@ bool f(TreeNode<int> *root, int x, vector<int> &ans){
 
 vector<int> pathInATree(TreeNode<int> *root, int x){
    vector<int> ans;
-
+   f(root, x, ans);
    return ans; 
 }

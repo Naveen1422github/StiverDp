@@ -17,7 +17,6 @@ vector<int> getInOrderTraversal(TreeNode *root)
     vector<int> a;
     stack<TreeNode*> s;
     
-    //TreeNode* root = boot;
     while(true){
         if(root!=NULL){
             s.push(root);
