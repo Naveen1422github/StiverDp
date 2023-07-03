@@ -1,4 +1,5 @@
-// tc=v+e + v   sc=2n + n
+// tc=v+e + v   sc=2n +n
+
 
 bool f( vector<bool> &visited, vector<bool> &path, vector<int> adj[], int node ){
          
@@ -25,7 +26,7 @@ bool isCyclic(int v, vector<int> adj[]) {
     for(int i=0; i<v; i++){
 
         if(!visited[i]){
-            if(f(visited, path, adj, i, -1)) return true;
+            if(f(visited, path, adj, i)) return true;
         }
     }
 
