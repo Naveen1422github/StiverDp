@@ -13,9 +13,7 @@ day 17, 18, 19 refers to SDE sheet
 # Striver Graph Series
 
 in part1 folder there are problems from 1-12 which are in sde sheet of graph part1
-and inside part1 folder there is also folder named lectureprobs in which there are
-problmes till lecture 31 of striver graph series except the problems that are already
-outhere in part1
+and inside lectureprobs there are problmes till lecture 31 of striver graph series except the problems that are already in part1.
 
-
+on 4/7 i finished l30 from tree and l30 from graph of striver playlist
 
