@@ -1,4 +1,6 @@
 
+//https://www.codingninjas.com/studio/problems/maze-obstacles_977241?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos
+
 int f(int n, int m, vector<vector<int>> &mat){
 
     int mod = 1e9+7; 
